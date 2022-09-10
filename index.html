@@ -1,71 +1,41 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-
-  <title> คิดถึงเสมอนะ </title>
-
-</style>
-
-</head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
-<style>
-body {
-  font-family: "Sofia", sans-serif;
-  font-size: 30px;
-}
-
-
-body {
-
-  background-image: url('background.jpg');
-
-  background-repeat: no-repeat;
-
-  background-attachment: fixed;
-
-  background-size: cover;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-  <h1> <strong class="font-effect-shadow-multiple" style="color:Tomato;"> ⠀⠀⠀⠀⠀EH4404 </strong> </h1>
-
-<img src="background.jpg" alt="error" width="1" height="1">
-
-<strong class="font-effect-emboss" style="color:White;" width="320 height="240" controls > errorhacker </strong>
-<p>⠀⠀⠀</p>
-<p>⠀⠀⠀</p>
-<strong style="color:Red;" style="font-size:150%;" >  ⠀⠀⠀⠀⠀ดาวโหลดไฟล์ต่าง  </strong>
-<p>⠀⠀⠀</p>
-<a href="https://www.mediafire.com/download/yy5gmygqr8zfw7u" target="_blank" style="color: Yellow;" > ● ไฟล์สแปม sms เปิดโค้ด</a>
-<p>⠀⠀⠀</p>
-<a href="https://www.mediafire.com/download/aptjex0yw4y1r77" target="_blank" style="color: Orange;" > ● ไฟล์สแปม sms V.2 เปิดโค้ด</a>
-<p>⠀⠀⠀</p>
-<a href="https://mega.nz/file/5EkRhaZJ#lhf5kd0JFXCqecPd-8fnbgZQkIp6jL-1cXOzc63QxvQ" target="_blank" style="color: White;" > ● แอปดัก api </a>
-<p>⠀⠀⠀</p>
-<a href="https://mega.nz/file/ZNFyQBIL#cFwmXkVfU8AukQVuwhr-b_1oX9ZHiYSVtEEHcVdGbto" target="_blank" style="color: Tomato;" > ● แอปเขียนโค้ด ไม่มีโฆษณา </a>
-<p>⠀⠀⠀</p>
-<a href="https://www.mediafire.com/download/rv4k1bhp5erh3uh" target="_blank" style="color: Yellow;" > ● ไฟล์สีต่างๆๆ </a>
-<p>⠀⠀⠀</p>
-<a href="https://www.mediafire.com/download/qc6dbwp3r7zika2" target="_blank" style="color: White;" > ● src บอทดิสคอส </a>
-<p>⠀⠀⠀</p>
-<a href="https://mega.nz/file/5EMR3ICK#t5rBNy2vUaZinYflml_JLHhpxidrnby4k_OiAyA093A" target="_blank" style="color: Orange;" > ● แอปเทอมัก </a>
-<p>⠀⠀⠀</p>
-<strong style="color:Pink;" style="font-size:150%;" > ⠀⠀⠀ช่องทางติดต่อต่างๆ  </strong>
-<p>⠀⠀⠀</p>
-<p style="color: Yellow;"> ■⠀testspam878@gmail.com</p>
-<p>⠀</p>
-<a href="https://lin.ee/11AYWrj"><img height="100" border="0" src="https://scdn.line-apps.com/n/line_add_friends/btn/th.png"></a>
-</body>
-<p>⠀</p>
-
-
-
+<html ng-app="airpub" ng-controller="global">
+  <head ng-controller="meta">
+    <base href="/" />
+    <meta charset="UTF-8">
+    <title ng-bind="title"></title>
+    <meta name="fragment" content="!" />
+    <meta name="description" content="{{description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- dependencies stylesheets and scripts, using default GitHub Page CDN -->
+    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/airpub-dependencies.min.css?v=0.3.2">
+    <script src="http://static.duoshuo.com/airpub/airpub-dependencies.min.js?v=0.3.2"></script>
+    <!-- default theme: chill -->
+    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/css/chill.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/favicon.ico" />
+  </head>
+  <body ng-controller="base" ng-class="state.current.controller">
+    <div ui-view="layout"></div>
+    <!-- airpub configs -->
+    <script>
+      var airpubConfigs = {        
+        name: 'Airpub', // 博客名称
+        description: 'Just another Airpub blog', // 博客描述
+        url: 'http://your-uri', // 博客站点永久链接
+        theme: 'chill/0.3.0', // 当前主题与主题版本（如无版本可省略为：`chill`）
+        themePath: 'http://static.duoshuo.com/airpub/themes', // 博客主题根目录
+        upyun: { // 用于上传图片
+          bucket: 'mybucket', // 又拍云 bucket 配置 (可选)
+          form_api_secret: 'xxxxxx' // 又拍云 form_api_secret (可选)
+        }
+      };
+      var duoshuoQuery = {
+        short_name: 'your_duoshuo_short_name' // 修改成你的多说 short_name
+      };
+    </script>
+    <!-- duoshuo embed js -->
+    <script src="http://static.duoshuo.com/embed.unstable.js"></script> 
+    <!-- airpub angular app -->
+    <script src="http://static.duoshuo.com/airpub/airpub.min.js?v=0.3.2"></script>
+  </body>
 </html>
